@@ -1,0 +1,17 @@
+
+ <button (click)="chercher()" >Affiche</button>
+
+ <table>
+    <th>idCountry</th><th>codeIso</th>
+    <tr *ngFor="let item of pagePays" >
+      <td>{{item.idCountry}}</td> <td>{{item.codeIso}}</td>
+    </tr>
+  </table>
+  <span style='margin-left: 1.5rem;'> nombre total de page est  {{nombreTotalDepagePagination+1}} </span>
+
+<ul >
+  <li style='display: inline-block; margin: 0 5px;' *ngFor="let item of paginationPage; let i = index" >
+    <a (click)="goToPage(i)"class="page-link">{{i+1}}</a>
+  </li>
+</ul>
+<!-- {{pagePays?.resultList}} -->
