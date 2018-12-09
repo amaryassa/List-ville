@@ -1,17 +1,39 @@
+<div class="container spacer">
+  <div class="card">
+    <div class="card-header bg-info"> Pays</div>
+    <div class="input-group col-sm-5 spacer">
+        <input [(ngModel)]="motCle" type="text" class="form-control" placeholder="Recherche par Mot clé"/>
+        <div class="input-group-append">
+          <button (click)= 'chercher()' class="btn btn-secondary" type="button">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        <table class="table table-striped">
+          <tr>
+            <th>idCountry</th><th>code Iso</th>
+          </tr>
+          <tr *ngFor="let item of pagePays" >
+            <td>{{item.idCountry}}</td>
+            <td>{{item.codeIso}}</td>
+          </tr>
+        </table>
+    </div>
+  </div>
 
- <button (click)="chercher()" >Affiche</button>
 
- <table>
-    <th>idCountry</th><th>codeIso</th>
-    <tr *ngFor="let item of pagePays" >
-      <td>{{item.idCountry}}</td> <td>{{item.codeIso}}</td>
-    </tr>
-  </table>
-  <span style='margin-left: 1.5rem;'> nombre total de page est  {{nombreTotalDepagePagination+1}} </span>
+   <nav aria-label="Page navigation example spacer">
+        <ul class="pagination">
+            <li class="numberPagination" *ngIf="nombreTotalDepagePagination>1" >{{currentPage+1}} / {{nombreTotalDepagePagination+1}} </li>
+            <li *ngIf="nombreTotalDepagePagination>1"  [ngClass]="{disabled: currentPage == 0}" class="page-item"><a (click)="prevPage()" class="page-link" >❮  </a></li>
+            <!-- <li [ngClass]="{active: i == currentPage}"  *ngFor="let p of pages; let i = index" class="page-item">
+              <a (click)="goToPage(i)"  class="page-link">{{i+1}}</a>
+            </li> -->
 
-<ul >
-  <li style='display: inline-block; margin: 0 5px;' *ngFor="let item of paginationPage; let i = index" >
-    <a (click)="goToPage(i)"class="page-link">{{i+1}}</a>
-  </li>
-</ul>
-<!-- {{pagePays?.resultList}} -->
+            <li *ngIf="nombreTotalDepagePagination>1" [ngClass]="{disabled: currentPage == nombreTotalDepagePagination}" class="page-item "><a (click)="nextPage()" class="page-link" >  ❯</a></li>
+          </ul>
+      </nav>
+</div>
+
+
