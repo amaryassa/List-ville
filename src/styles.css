@@ -17,3 +17,8 @@ color:red;
   justify-content: center;
   margin: 0 10px;
 }
+tr:hover{
+  background-color: #2fb74fde !important;
+  cursor: pointer;
+  color: white !important;
+}

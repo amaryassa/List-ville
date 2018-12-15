@@ -1,3 +1,45 @@
-<p>
-  city works!
-</p>
+<div class="container spacer">
+  <div class="card">
+    <div class="card-header bg-info">City</div>
+    <div class="input-group col-sm-5 spacer">
+        <input  [(ngModel)]="motCle" type="text" class="form-control" placeholder="Recherche par Ville"/>
+        <div class="input-group-append">
+          <button (click)= 'chercher()' class="btn btn-secondary" type="button">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+
+
+      <div class="card-body">
+        <table class="table table-striped">
+          <tr>
+            <th>NOM Ville</th><th>CP</th> <th>Région</th> <th>Langue</th> <th>Pays</th>
+          </tr>
+          <tr *ngFor="let item of pageCity" >
+            <td><p ng-if="item.cityName != null">{{item.cityName}} </p></td>
+            <td><p ng-if="item.idZip != null">{{item.idZip}} </p></td>
+            <td><p ng-if="item.cityArea.areaLabel != null">{{item.cityArea.areaLabel}} </p></td>
+            <td><p ng-if="item.cityArea.areaLanguage.languageName != null">{{item.cityArea.areaLanguage.languageName}} </p></td>
+            <td><p ng-if="item.view != cityArea.areaCountry.codeIso">{{item.cityArea.areaCountry.codeIso}} </p></td>
+          </tr>
+        </table>
+    </div>
+  </div>
+
+
+  <nav aria-label="Page navigation example spacer">
+      <ul class="pagination">
+          <li class="numberPagination" *ngIf="nombreTotalDepagePagination>1" >{{currentPage+1}} / {{nombreTotalDepagePagination+1}} </li>
+          <li *ngIf="nombreTotalDepagePagination>1"  [ngClass]="{disabled: currentPage == 0}" class="page-item"><a (click)="prevPage()" class="page-link" >❮  </a></li>
+          <!-- <li [ngClass]="{active: i == currentPage}"  *ngFor="let p of pages; let i = index" class="page-item">
+            <a (click)="goToPage(i)"  class="page-link">{{i+1}}</a>
+          </li> -->
+
+          <li *ngIf="nombreTotalDepagePagination>1" [ngClass]="{disabled: currentPage == nombreTotalDepagePagination}" class="page-item "><a (click)="nextPage()" class="page-link" >  ❯</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+

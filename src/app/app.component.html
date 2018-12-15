@@ -1,10 +1,39 @@
-<div style="" class="container spacer" style="margin-bottom:20px">
-  <button routerLink="/country" class="btn btn-primary mr-2">Country</button>
-  <button routerLink="/area" class="btn btn-primary mr-2">Area</button>
-  <button routerLink="/city" class="btn btn-primary mr-2">City</button>
-  <button routerLink="/street" class="btn btn-primary mr-2">Street</button>
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/">New Tech</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-</div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link"routerLink="/country">Pays</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link"routerLink="/area">Région</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link"routerLink="/city">Ville</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link"routerLink="/street">Rue</a>
+      </li>
+
+
+
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
 <router-outlet>
-
 </router-outlet>

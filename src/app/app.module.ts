@@ -10,15 +10,15 @@ import { AreaComponent } from './area/area.component';
 import { CityComponent } from './city/city.component';
 import { StreetComponent } from './street/street.component';
 import { RouterModule, Routes} from '@angular/router';
-import { StreetComponent } from './street/street.component';
-import { CityComponent } from './city/city.component';
-import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 const appRoutes: Routes = [
   {path: 'country', component: PaysComponent},
   {path: 'area', component: AreaComponent},
   {path: 'city', component: CityComponent},
   {path: 'street', component: StreetComponent},
-  {path: '', redirectTo : '/', pathMatch: 'full'}
+  {path: '', component: HomeComponent}
+  // {path: '', redirectTo : '/', pathMatch: 'full'}
+  // {path: '', redirectTo : '/', pathMatch: 'full'}
   ];
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ const appRoutes: Routes = [
     PaysComponent,
     AreaComponent,
     StreetComponent,
-    CityComponent
+    CityComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule, HttpModule, FormsModule, HttpClientModule, RouterModule.forRoot(appRoutes)
