@@ -32,4 +32,5 @@ si l'application [SpringMVC](https://github.com/amaryassa/List-ville-SpringMvc) 
 #### Petit Problème pas encore réglé:
 * Si l'application ne démarre pas et affiche ``` Cannot GET /```
 * aller dans ```List-ville-Angular/src/app/app.component.ts```
-* changer le titre de la page et recharger la page
+* ligne 9
+* changer le title de la page, sauvegarder et recharger la page
