@@ -17,3 +17,19 @@ ng serve
 ```
 * naviguer:  http://localhost:4200/
 
+
+### Important
+
+si l'application [SpringMVC](https://github.com/amaryassa/List-ville-SpringMvc) ne tourne pas en local (localhost)  ou sur un port différent que 8080 il faut penser à changer tous les services dans ```List-ville-Angular/src/services/```
+#### Exemple modification un services
+* l'application [SpringMVC](https://github.com/amaryassa/List-ville-SpringMvc) tourne en local avec le port 8585  (http://localhost:8585/SpringWeb/)
+
+* le service: *area.service.ts* à la ligne **12**
+* il faut changer http://localhost:8080/SpringWeb/area1?motCle=${motCle}&page=${page}&size=${size}
+* par http://localhost:8585/SpringWeb/area1?motCle=${motCle}&page=${page}&size=${size}
+
+
+#### Petit Problème pas encore réglé:
+* Si l'application ne démarre pas et affiche ``` Cannot GET /```
+* aller dans ```List-ville-Angular/src/app/app.component.ts```
+* changer le titre de la page et recharger la page
