@@ -1,27 +1,19 @@
 # VillePays
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
+C'est un projet FrontEnd pour cette application  [SpringMVC](https://github.com/amaryassa/List-ville-SpringMvc)
 
-## Development server
+### Prerequisites
+* installation de Node [NodeJS Pages](http://nodejs.org/)
+* installation de NPM [NPM Pages](https://www.npmjs.org/)
+* installation de  *Angular CLI  - version 7.0.6*  `npm install -g @angular/cli`  
+* lancement du projet backend [SpringMVC](https://github.com/amaryassa/List-ville-SpringMvc)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Getting Started
+```
+git clone https://github.com/amaryassa/List-ville-Angular
+cd List-ville-Angular
+npm install
+ng serve
+```
+* naviguer:  http://localhost:4200/
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
