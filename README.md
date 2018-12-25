@@ -25,8 +25,8 @@ si l'application [SpringMVC](https://github.com/amaryassa/List-ville-SpringMvc) 
 * l'application [SpringMVC](https://github.com/amaryassa/List-ville-SpringMvc) tourne en local avec le port 8585  (http://localhost:8585/SpringWeb/)
 
 * le service: *area.service.ts* à la ligne **12**
-* il faut changer http://localhost:8080/SpringWeb/area1?motCle=${motCle}&page=${page}&size=${size}
-* par http://localhost:8585/SpringWeb/area1?motCle=${motCle}&page=${page}&size=${size}
+* il faut changer ```http://localhost:8080/SpringWeb/area1?motCle=${motCle}&page=${page}&size=${size}```
+* par ```http://localhost:8585/SpringWeb/area1?motCle=${motCle}&page=${page}&size=${size}```
 
 
 #### Petit Problème pas encore réglé:
